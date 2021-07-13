@@ -53,7 +53,7 @@ class TextAnalyzeServiceUnitTests {
     public void getLanguageTest()
     {
         String language = service.getLanguage();
-        assertEquals("undeciable",language);
+        assertEquals("undecidable",language);
     }
 
     @Test
