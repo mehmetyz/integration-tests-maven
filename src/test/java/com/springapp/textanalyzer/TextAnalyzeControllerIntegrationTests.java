@@ -134,7 +134,7 @@ class TextAnalyzeControllerIntegrationTests {
 
         mockMvc.perform(post("/analyze/language").contentType(MediaType.APPLICATION_JSON).
                 content(content).accept(MediaType.APPLICATION_JSON)).andExpect(status().isOk())
-                .andExpect(MockMvcResultMatchers.jsonPath("$.language").value("tr"));
+                .andExpect(MockMvcResultMatchers.jsonPath("$.language").value("en"));
     }
 
 
