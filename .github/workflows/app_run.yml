@@ -16,6 +16,7 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
+          
 
       - name: Thundra Maven Test Instrumentation
         uses: thundra-io/thundra-maven-test-action@v1
