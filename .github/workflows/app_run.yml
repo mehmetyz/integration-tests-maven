@@ -15,10 +15,11 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
           
-
-      - name: Thundra Maven Test Instrumentation
-        uses: thundra-io/thundra-maven-test-action@v1
+      - name: Run Maven
+        run: mvn clean install
+      
+      - name: Foresight Test Report Uploader
+        uses: actions/upload-artifact@v2
         with:
-          apikey: ${{secrets.THUNDRA_API_KEY}}
-          project_id: ${{secrets.THUNDRA_PROJECT_ID}}
-          command: mvn clean install
+          name: test-result-junit
+          path: ./target
